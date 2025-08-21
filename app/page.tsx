@@ -147,7 +147,7 @@ export default function HomePage() {
   };
 
   const handleSubmit = async (order: any[], name?: string) => {
-    if (name === '54503512345') {
+  if (name === '545035') {
       setAdmin(true);
       setSubmitted(false);
       setOrder([]);
@@ -321,7 +321,7 @@ export default function HomePage() {
           <button
             type="button"
             onClick={() => {
-              if (adminInput === '54503512345') {
+              if (adminInput === '545035') {
                 setAdmin(true);
                 setAdminInput('');
               } else {
