@@ -12,7 +12,7 @@ export default function HomePage() {
   const [locations, setLocations] = useState<string[]>(["Kuzina", "Extrem", "Bosna", "Chepizza", "Gjakova"]);
   const [activeLocation, setActiveLocation] = useState<string>("Kuzina");
   useEffect(() => {
-  fetch('http://192.168.33.55:4000/location')
+  fetch('https://ceramdet-food-order-app-1.onrender.com/location')
       .then(res => res.json())
       .then(data => {
         if (data.location && locations.includes(data.location)) {
@@ -155,7 +155,7 @@ export default function HomePage() {
       return;
     }
     // Send order to backend
-  await fetch('http://192.168.33.55:4000/orders', {
+  await fetch('https://ceramdet-food-order-app-1.onrender.com/orders', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ order, customer: name, location: activeLocation })
@@ -190,13 +190,13 @@ export default function HomePage() {
                   type="button"
                   style={{ background: '#0070f3', color: '#fff', border: 'none', borderRadius: 4, padding: '6px 14px', marginRight: 8 }}
                   onClick={async () => {
-                    await fetch('http://192.168.33.55:4000/location', {
+                    await fetch('https://ceramdet-food-order-app-1.onrender.com/location', {
                       method: 'POST',
                       headers: { 'Content-Type': 'application/json' },
                       body: JSON.stringify({ location: activeLocation })
                     });
                     // Fetch the latest location from backend and update state
-                    const res = await fetch('http://192.168.33.55:4000/location');
+                    const res = await fetch('https://ceramdet-food-order-app-1.onrender.com/location');
                     const data = await res.json();
                     if (data.location && locations.includes(data.location)) {
                       setActiveLocation(data.location);
@@ -235,7 +235,7 @@ export default function HomePage() {
                       type="button"
                       style={{ background: '#222', color: '#fff', border: 'none', borderRadius: 4, padding: '6px 14px' }}
                       onClick={async () => {
-                        const res = await fetch('http://192.168.33.55:4000/orders');
+                        const res = await fetch('https://ceramdet-food-order-app-1.onrender.com/orders');
                         const data = await res.json();
                         if (!data.orders.length) {
                           alert('No orders yet.');
@@ -265,7 +265,7 @@ export default function HomePage() {
                       type="button"
                       style={{ background: '#0070f3', color: '#fff', border: 'none', borderRadius: 4, padding: '6px 14px' }}
                       onClick={async () => {
-                        const res = await fetch('http://192.168.33.55:4000/orders');
+                        const res = await fetch('https://ceramdet-food-order-app-1.onrender.com/orders');
                         const data = await res.json();
                         const printWindow = window.open('', '', 'width=800,height=600');
                         if (printWindow) {
@@ -339,7 +339,7 @@ export default function HomePage() {
               style={{ background: '#e00', color: '#fff', border: 'none', borderRadius: 4, padding: '6px 14px', marginTop: 12, display: 'block' }}
               onClick={async () => {
                 if (window.confirm('Are you sure you want to reset all orders?')) {
-                  const res = await fetch('http://192.168.33.55:4000/orders/reset', { method: 'POST' });
+                  const res = await fetch('https://ceramdet-food-order-app-1.onrender.com/orders/reset', { method: 'POST' });
                   if (res.ok) {
                     alert('All orders have been reset!');
                   } else {
