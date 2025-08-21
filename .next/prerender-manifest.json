@@ -1,36 +1,11 @@
 {
   "version": 4,
-  "routes": {
-    "/": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/",
-      "dataRoute": "/index.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    }
-  },
+  "routes": {},
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "f64df371ae937ec61f9ac67f68fc97f5",
-    "previewModeSigningKey": "e80d2912f0cc781aef9a79d7efe32b8a3a0d3e6f68417d9e47c3d0afe6bdd1d1",
-    "previewModeEncryptionKey": "0531b8c0eaade390277154827fc22ac1fb2a2e0c0b7b65e441e17fc5cefa7902"
+    "previewModeId": "747d86f34306994126fbeec223024747",
+    "previewModeSigningKey": "44f08f2c3879e7ee7e165ae326f85062f2955da6c0ad58d2f5d597ab74d53017",
+    "previewModeEncryptionKey": "d1af1429fe74d4eda44796f976d8382f138bd6c7b6a52a219380b4289dc07eda"
   }
 }
