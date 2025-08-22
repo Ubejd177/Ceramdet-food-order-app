@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const isGithubPages = process.env.NODE_ENV === 'production';
-const repoName = 'Ceramdet-food-order-app'; // your repo name
+const repoName = 'Ceramdet-food-order-app';
 
 const nextConfig = {
   output: 'export',
