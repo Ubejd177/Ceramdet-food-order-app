@@ -2,8 +2,16 @@
   "version": 3,
   "pages404": true,
   "caseSensitive": false,
-  "basePath": "",
+  "basePath": "/Ceramdet-food-order-app",
   "redirects": [
+    {
+      "source": "/Ceramdet-food-order-app/",
+      "destination": "/Ceramdet-food-order-app",
+      "basePath": false,
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^/Ceramdet-food-order-app/$"
+    },
     {
       "source": "/:path+/",
       "destination": "/:path+",
@@ -14,7 +22,13 @@
   ],
   "headers": [],
   "rewrites": {
-    "beforeFiles": [],
+    "beforeFiles": [
+      {
+        "source": "/Ceramdet-food-order-app//_next/:path+",
+        "destination": "/Ceramdet-food-order-app/_next/:path+",
+        "regex": "^/Ceramdet-food-order-app//_next(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))(?:/)?$"
+      }
+    ],
     "afterFiles": [],
     "fallback": []
   },
