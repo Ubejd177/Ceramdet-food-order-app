@@ -1,11 +1,8 @@
 /** @type {import('next').NextConfig} */
-const isGithubPages = process.env.NODE_ENV === 'production';
-const repoName = 'Ceramdet-food-order-app';
-
 const nextConfig = {
   output: 'export',
-  basePath: isGithubPages ? `/${repoName}` : '',
-  assetPrefix: isGithubPages ? `/${repoName}/` : '',
+  basePath: '/Ceramdet-food-order-app',
+  assetPrefix: '/Ceramdet-food-order-app/',
 };
 
 module.exports = nextConfig;

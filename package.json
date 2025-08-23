@@ -16,14 +16,14 @@
     "convex": "^1.25.4",
     "cors": "^2.8.5",
     "express": "^5.1.0",
-    "next": "15.4.5",
+    "next": "^15.5.0",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
-    "@types/react": "^19",
+    "@types/react": "19.1.10",
     "@types/react-dom": "^19",
     "gh-pages": "^6.3.0",
     "tailwindcss": "^4",
